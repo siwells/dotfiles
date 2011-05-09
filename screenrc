@@ -1,0 +1,31 @@
+hardstatus on					# Output status of screen(s) to the display
+hardstatus alwayslastline		# Position output at bottom of display
+
+# OLD STATUS LINES 1
+#hardstatus string "%{=b}%{G} Screen(s): %{b}%w"
+#hardstatus string "Screens: %{.bW}%-w%{-.rW}%n %t%{-}%+w %=%{..G} %{..Y} %m %d %C%a "
+
+# OLD STATUS LINES 2
+#caption     always        "%{+b rk}%H%{gk} |%c %{yk}%d.%m.%Y | %72=Load: %l %{wk}"
+#hardstatus alwayslastline "%?%{yk}%-Lw%?%{wb}%n*%f %t%?(%u)%?%?%{yk}%+Lw%?"
+
+# CURRENT STATUS LINES
+hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%< %=%D %M %d %c"
+hardstatus string '%{= kK}%-Lw%{= KW}%50>%n%f %t%{= kK}%+Lw%< %{=kG}%-= %d%M %c:%s%{-}'
+
+#TEST
+
+#EOTEST
+
+# Display a aprticular message in the status output
+
+startup_message off				# Turn off start message:
+shell -bash						# Shell
+shelltitle ''
+defscrollback 1024 				# define a bigger scrollback, default is 100 lines
+activity "activity: window ~%"  # Message when activity occurs in a window
+vbell_msg "bell: window ~%"     # Message for visual bell
+vbellwait 2                     # Seconds to pause the screen for visual bell
+allpartial off                  # Refresh entire screen on window change
+autodetach on                   # Autodetach session on hangup instead of
+                                # terminating screen completely
