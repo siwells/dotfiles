@@ -15,10 +15,3 @@ set ignorecase     				" ignore case when searching
 :set title						" show title in console title bar
 :set tabpagemax=15				" max number of open tabs
 
-set nocompatible				"Required by vimwiki
-filetype plugin on				"Required by vimwiki
-syntax on						"Required by vimwiki
-
-"Key:Value list used to set up various wikis
-let g:vimwiki_list = [{'path': '~/Dropbox/notes/aide.memoire/'},{'path':'~/Dropbox/notes/recipes/'}]
-
