@@ -1,5 +1,5 @@
 alias ls='ls -G'
 
-export export PS1="\[\033[0;36m\]\u@\h \W \[\033[0;32m\]$ "
+export export PS1="\[\033[0;36m\]\u@\h \w \[\033[0;32m\]$ "
 
 source ~/.git-completion.sh
