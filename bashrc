@@ -15,3 +15,6 @@ export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin:$CATALINA_HOME/bin
 
 # CLASSPATH
 export CLASSPATH=.:/usr/share/java/junit4.jar
+
+# Now add shell completion script for Git
+source ~/.git-completion.sh
