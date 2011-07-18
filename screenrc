@@ -13,12 +13,6 @@ hardstatus alwayslastline		# Position output at bottom of display
 hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%< %=%D %M %d %c"
 hardstatus string '%{= kK}%-Lw%{= KW}%50>%n%f %t%{= kK}%+Lw%< %{=kG}%-= %d%M %c:%s%{-}'
 
-#TEST
-
-#EOTEST
-
-# Display a aprticular message in the status output
-
 startup_message off				# Turn off start message:
 shell -bash						# Shell
 shelltitle ''
