@@ -1,6 +1,6 @@
 alias ls='ls -G'
 
 export titlebar='\[\e]2;\w\a\e]1'
-export export PS1="\[${titlebar}\]\[\033[0;36m\]\u@\h \w \[\033[0;32m\]$ "
+export PS1="\[${titlebar}\]\[\033[0;36m\]\u@\h \w \[\033[0;32m\]$ "
 
 source ~/.git-completion.sh
