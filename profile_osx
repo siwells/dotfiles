@@ -4,3 +4,23 @@ export titlebar='\[\e]2;\w\a\e]1'
 export PS1="\[${titlebar}\]\[\033[0;36m\]\u@\h \w \[\033[0;32m\]$ "
 
 source ~/.git-completion.sh
+
+###
+# exports for OMERO.server & dependencies
+###
+export OMEROLIBS=~/apps/OMERO.libs
+export OMERO_HOME=$OMEROLIBS/Cellar/omero43/4.3/
+export ICE_CONFIG=$OMERO_HOME/etc/ice.config
+export PYTHONPATH=$OMERO_HOME/lib/python:$OMEROLIBS/Cellar/zeroc-ice33/3.3.1/python
+export ICE_HOME=$OMEROLIBS/Cellar/zeroc-ice33
+
+###
+#  Path [including: OMERO & OMERO deps]
+###
+export PATH=/usr/local/bin:$OMEROLIBS/bin:$OMERO_HOME/bin:/usr/local/lib/node_modules:$ICE_HOME/bin:$PATH
+
+###
+#  Dynamic Library Path [including: OMERO deps]
+###
+export DYLD_LIBRARY_PATH=$OMEROLIBS/lib
+
