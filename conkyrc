@@ -35,45 +35,69 @@
     ${voffset -90}
     ${color DimGray}
     ${font}
-    ${font Arial:bold:size=10}${color Tan1}SYSTEM ${color Tan1} ${hr 2}
-    $font${color DimGray}$sysname $kernel $alignr $machine
+    
+	${font Arial:bold:size=10}${color Tan1}SYSTEM ${color Tan1} ${hr 2}
+    $font${color DimGray}
+    $sysname $kernel $alignr $machine
     Intel Pentium D $alignr${freq_g cpu0}Ghz
     CPU Temp $alignr${acpitemp}C
     Uptime $alignr${uptime}
     File System $alignr${fs_type}
-    ${font Arial:bold:size=10}${color Tan1}PROCESSORS ${color Tan1}${hr 2}
-    ${color DimGray}${cpugraph cpu0 32,309 000000 7f8ed3}
+    
+	${font Arial:bold:size=10}${color Tan1}CPU ${color Tan1}${hr 2}
+    ${color DimGray}${cpugraph cpu0 32,400 ${color DimGray}}
     $font${color DimGray}CPU0  ${cpu cpu0}% ${cpubar cpu0}
-    ${color DimGray}${cpugraph cpu1 32,309 000000 7f8ed3}
+    ${color DimGray}${cpugraph cpu1 32,400 ${color DimGray}}
     $font${color DimGray}CPU1  ${cpu cpu1}% ${cpubar cpu1}
-    ${color DimGray}${cpugraph cpu2 32,309 000000 7f8ed3}
+    ${color DimGray}${cpugraph cpu2 32,400 ${color DimGray}}
     $font${color DimGray}CPU2  ${cpu cpu2}% ${cpubar cpu2}
-    ${color DimGray}${cpugraph cpu3 32,309 000000 7f8ed3}
-    $font${color DimGray}CPU3  ${cpu cpu3}% ${cpubar cpu3}    
+    ${color DimGray}${cpugraph cpu3 32,400 ${color DimGray}}
+    $font${color DimGray}CPU3  ${cpu cpu3}% ${cpubar cpu3}
+
     ${font Arial:bold:size=10}${color Tan1}MEMORY ${color Tan1}${hr 2}
     $font${color DimGray}MEM $alignc $mem / $memmax $alignr ${memperc}%
     ${membar 8}
     $font${color DimGray}SWAP $alignc $swap / $swapmax $alignr $swapperc%
     ${swapbar 8}
-    ${font Arial:bold:size=10}${color Tan1}HDD ${color Tan1}${hr 2}
+    
+	${font Arial:bold:size=10}${color Tan1}FILE SYSTEMS ${color Tan1}${hr 2}
     $font${color DimGray}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_free_perc /}%
     ${fs_bar /}
     $font${color DimGray}/home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_free_perc /home}%
     ${fs_bar /home}
+
+	${font Arial:bold:size=10}${color Tan1}HDD ${color Tan1}${hr 2}
+    ${color DimGray}$font /dev/sda ${hr 1}
+	${color DimGray}$font   Read $alignr ${diskio_read /dev/sda}
+    ${color DimGray}$font Write $alignr ${diskio_write /dev/sda}
+    ${diskiograph /dev/sda ${color DimGray} 30,400}
+
+    ${color DimGray}$font /dev/sdb ${hr 1}
+	${color DimGray}$font   Read $alignr ${diskio_read /dev/sdb}
+    ${color DimGray}$font Write $alignr ${diskio_write /dev/sdb}
+	${diskiograph /dev/sdb ${color DimGray} 30,400 }
+
     ${font Arial:bold:size=10}${color Tan1}PROCESSES ${color Tan1}${hr 2}
-	${color DimGray}$font Total  $alignr $processes
-	$font Running $alignr $running_processes
-    ${color DimGray}$font${top_mem name 2}${alignr}${top mem 2} %
+	${color DimGray}$font Total $alignr $processes
+	${color DimGray}$font  Running $alignr $running_processes
+    ${color DimGray}
+    
+    $font${top_mem name 1}${alignr}${top mem 1} %
+    $font${top_mem name 2}${alignr}${top mem 2} %
     $font${top_mem name 3}${alignr}${top mem 3} %
     $font${top_mem name 4}${alignr}${top mem 4} %
     $font${top_mem name 5}${alignr}${top mem 5} %
+
     ${font Arial:bold:size=10}${color Tan2}NETWORK ${color Tan1}${hr 2}
-    $font${color DimGray}IP on eth0 $alignr ${addr eth0}
-    Down $alignr ${downspeed eth0} kb/s
-    Up $alignr ${upspeed eth0} kb/s
-    Downloaded: $alignr  ${totaldown eth0}
-    Uploaded: $alignr  ${totalup eth0}
-    ${color DimGray}Downloads:${downspeedgraph eth0 32,150 000000 7f8ed3} ${color DimGray}Uploads:${upspeedgraph eth0 32,150 000000 7f8ed3}
+	${color DimGray}$font eth0 ${hr 1}
+	${color DimGray}$font   IP  $alignr ${addr eth0}
+    ${color DimGray}$font Down Speed $alignr ${downspeed eth0} kb/s
+	${downspeedgraph eth0 32,400 000000 ${color DimGray}}
+    ${color DimGray}$font Up Speed $alignr ${upspeed eth0} kb/s
+	${upspeedgraph eth0 32,400 000000 ${color DimGray}}
+    ${color DimGray}$font Downloaded: $alignr  ${totaldown eth0}
+    ${color DimGray}$font Uploaded: $alignr  ${totalup eth0}
+
     ${font Arial:bold:size=10}${color Tan2}TIME ${color Tan1}${hr 2}
     ${color Ivory} ${font :size=30}$alignc${time %H:%Mh}
     ${voffset -30}${font :bold:size=10}$alignc${time %d %b. %Y}
