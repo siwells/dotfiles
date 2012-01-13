@@ -6,6 +6,8 @@ export GREP_OPTIONS='--color=always'
 
 source ~/.git-completion.sh
 
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 ###
 # exports for OMERO.server & dependencies
 ###
