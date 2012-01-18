@@ -2,6 +2,7 @@ alias ls='ls -G'
 
 export titlebar='\[\e]2;\w\a\e]1'
 export PS1="\[${titlebar}\]\[\033[0;36m\]\u@\h \w \[\033[0;32m\]$ "
+
 export GREP_OPTIONS='--color=always'
 
 source ~/.git-completion.sh
@@ -14,8 +15,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export OMEROLIBS=~/apps/OMERO.libs
 export OMERO_HOME=$OMEROLIBS/Cellar/omero43/4.3/
 export ICE_CONFIG=$OMERO_HOME/etc/ice.config
-export PYTHONPATH=$OMERO_HOME/lib/python:$OMEROLIBS/Cellar/zeroc-ice33/3.3.1/python
+export PYTHONPATH=$OMERO_HOME/lib/python2.6:$OMEROLIBS/Cellar/zeroc-ice33/3.3.1/python:$PYTHONPATH
 export ICE_HOME=$OMEROLIBS/Cellar/zeroc-ice33
+export HDF5_DIR=$OMEROLIBS/Cellar/hdf5/1.8.7
 
 ###
 #  Path [including: OMERO & OMERO deps]
