@@ -1,0 +1,18 @@
+[user]
+	name = 
+	email = 
+[github]
+	user = 
+	token = 
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	graph = log --date-order --graph --decorate --oneline
+	ff = merge --ff-only
+[diff]
+	color = auto
+[color]
+	ui = true
+	diff = auto
+	graph = auto
+	status = auto
+	branch = auto
