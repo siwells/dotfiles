@@ -7,25 +7,13 @@ export GREP_OPTIONS='--color=always'
 
 source ~/.git-completion.sh
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home)
 
-###
-# exports for OMERO.server & dependencies
-###
-export OMEROLIBS=~/apps/OMERO.libs
-export OMERO_HOME=$OMEROLIBS/Cellar/omero43/4.3/
-export ICE_CONFIG=$OMERO_HOME/etc/ice.config
-export PYTHONPATH=$OMERO_HOME/lib/python2.6:$OMEROLIBS/Cellar/zeroc-ice33/3.3.1/python:$PYTHONPATH
-export ICE_HOME=$OMEROLIBS/Cellar/zeroc-ice33
-export HDF5_DIR=$OMEROLIBS/Cellar/hdf5/1.8.7
-
-###
-#  Path [including: OMERO & OMERO deps]
-###
-export PATH=/usr/local/bin:$OMEROLIBS/bin:$OMERO_HOME/bin:/usr/local/lib/node_modules:$ICE_HOME/bin:$PATH
+export PYTHONPATH=$PYTHONPATH
+export PATH=/usr/local/bin:$PATH
 
 ###
 #  Dynamic Library Path [including: OMERO deps]
 ###
-export DYLD_LIBRARY_PATH=$OMEROLIBS/lib
+#export DYLD_LIBRARY_PATH=
 
