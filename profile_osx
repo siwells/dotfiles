@@ -10,7 +10,7 @@ source ~/.git-completion.sh
 #export JAVA_HOME=$(/usr/libexec/java_home)
 
 export PYTHONPATH=$PYTHONPATH
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 ###
 #  Dynamic Library Path [including: OMERO deps]
