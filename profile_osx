@@ -1,4 +1,5 @@
 alias ls='ls -G'
+alias pyenv='source ~/resources/python/bin/activate'
 
 export PS1="\[\033[0;36m\]\u@\h \w \[\033[0;32m\]$ "
 
