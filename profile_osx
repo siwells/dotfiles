@@ -11,9 +11,3 @@ source ~/.git-completion.sh
 
 export PYTHONPATH=$PYTHONPATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-###
-#  Dynamic Library Path [including: OMERO deps]
-###
-#export DYLD_LIBRARY_PATH=
-
