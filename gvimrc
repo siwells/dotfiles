@@ -1,4 +1,4 @@
-colorscheme desert
+colorscheme koehler
 set nofoldenable
 set tabstop=4
 set shiftwidth=4

@@ -14,4 +14,4 @@ set ignorecase     				" ignore case when searching
 :set ls=2						" always show status line
 :set title						" show title in console title bar
 :set tabpagemax=15				" max number of open tabs
-
+:colorscheme koehler
